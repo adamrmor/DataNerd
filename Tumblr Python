@@ -1,0 +1,46 @@
+import pytumblr
+from key import *    
+import requests
+import json
+import shutil 
+import time
+import urllib
+
+
+###############################################################################
+url = "http://api.aucklandmuseum.com/search/collectionsonline/_search"
+querystring = {"q":"primaryRepresentation:http*&size=3"}
+payload = "{\r\n\"sort\" : [\r\n{ \r\n\"lastModifiedOn\" : \r\n{\"order\" : \"desc\"} \r\n}\r\n]\r\n}\r\n"
+headers = {
+    'content-type': "application/json",
+    'cache-control': "no-cache",
+    'postman-token': "17fc23fc-aebf-2424-bca0-c3a850d08721"
+    }
+response = requests.request("POST", url, data=payload, headers=headers, params=querystring)
+###############################################################################
+
+#print(response.text)
+
+parsed_json = json.loads(response.text)
+id = parsed_json ["hits"]["hits"][0]['_id']
+dept = parsed_json ["hits"]["hits"][0]['_source']['department']
+image= parsed_json ["hits"]["hits"][0]['_source']['primaryRepresentation']
+title = parsed_json ["hits"]["hits"][0]['_source']['appellation']['Primary Title']
+
+print id
+Link = id.replace('http://api.aucklandmuseum.com/id/','http://www.aucklandmuseum.com/collections-research/collections/record/')
+print Link
+
+#download and save image locally
+urllib.urlretrieve(image, "00000001.jpg")
+
+
+
+#Authenticate via OAuth
+client = pytumblr.TumblrRestClient(
+  '#',
+  '#',
+  '#',
+  '#'
+)
+client.create_photo('collectionsimages', state="published", tags=['title'],source=['id'], data="00000001.jpg")
