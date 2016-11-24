@@ -1,0 +1,95 @@
+Admin Fields,
+Department,?subject ecrm:P50_has_current_keeper/rdf:value ?department .
+Taonga Flag,?subject am:isTaonga ?isTaonga
+Natural Science 'Type Specimen' Flag,?subject dwc:typeStatus ?type_status
+Copyright,?subject am:copyright/rdf:value ?copyright
+In Library Flag / Location,?subject am:location/rdf:value ?library_location
+On Display Flag,?subject am:onDisplayFlag ?display_location
+Record Score,?subject am:record_score ?record_score
+Date Created,?subject am:dateCreated ?date_created
+Record Type,?subject ecrm:P2_has_type/rdf:value ?documentType
+Sensitive Flags,?subject am:sensitive ?sensitive
+"Is ""Child"" record flag",?subject am:isChildOf ?childOf
+Tags,
+Museum Tags,?subject am:museum_tag ?museum_tag
+User Tags,?subject am:user_tag ?user_tag
+Image,
+Image Link,?subject ecrm:P138_has_representation%230 ?primaryRepresentation
+Identification ,
+Identifier,?subject ecrm:P48_has_preferred_identifier/rdf:value ?dc_identifier1
+Identifier,?subject am:referenceNumber/rdf:value ?dc_identifier2
+Identifier,?subject ecrm:P1_is_identified_by/rdf:value ?dc_identifier3
+Name / Title,?subject am:nameTitle/rdf:value ?appellation1
+Other Name,OPTIONAL { ?subject am:otherName/rdf:value ?appellation2
+Classification (Natural Sciences),OPTIONAL { ?subject am:classification/rdf:value ?appellation3
+Display Name (Natural Sciences),OPTIONAL { ?subject am:classification/am:displayValue ?appellation4
+Common Name (Natural Sciences),OPTIONAL { ?subject am:classification/am:commonName ?appellation5
+Maori Name (Natural Sciences),OPTIONAL { ?subject am:classification/am:maoriName ?appellation6
+Description /Notes,
+Description ,?subject dc:description ?dc_description1
+Description ,?subject am:description ?dc_description2
+Description ,?subject am:hasRole ?dc_description3
+Notes,?subject am:notes ?notes
+Documentary Heritage ,
+Documentary Heritage object 'Type',?subject am:subject/rdf:value ?type_subject
+Series,?subject am:series ?series
+Format,?subject dc:format ?dc_format
+Process,?subject ecrm:P108i_was_produced_by/ecrm:P32_used_general_technique ?process
+Support,?subject ecrm:P108i_was_produced_by/am:hasSupport ?support
+Content (Documentary Heriatge),?subject am:content ?content
+Keywords (Documentary Heritage),?subject am:keyword ?keyword
+Unit (Documentary Heritage),?subject am:unit ?unit
+Collection,?subject ecrm:P46i_forms_part_of/rdf:value ?collection
+Language,?subject ecrm:E72_has_language/rdfs:label ?language
+Statement of Responsibilty,?subject am:statementOfResponsibility ?responsibility
+Subject Category,?subject am:subjectCategory ?subjectCategory
+Geo Subject,?subject am:geoSubject/rdf:value ?geoSubject
+Place,
+Place Acquired ,?subject ecrm:P24i_changed_ownership_through/ecrm:P7_took_place_at/ecrm:P89_falls_within/geo-ont:name ?place_acquired1
+Place Acquired ,?subject ecrm:P24i_changed_ownership_through/ecrm:P56_is_found_on/ecrm:P89_falls_within/geo-ont:name ?place_acquired2
+Place Acquired ,?subject ecrm:P24i_changed_ownership_through/ecrm:P59_is_located_on_or_within/geo-ont:name ?place_acquired3
+Place Acquired ,?subject ecrm:P24_transferred_title_of/ecrm:P7_took_place_at/ecrm:P89_falls_within/geo-ont:name ?place_acquired4
+Place Acquired ,?subject ecrm:P24_transferred_title_of/ecrm:P56_is_found_on/ecrm:P89_falls_within/geo-ont:name ?place_acquired5
+Place Acquired ,?subject ecrm:P24_transferred_title_of/ecrm:P59_is_located_on_or_within/geo-ont:name ?place_acquired6
+Production Place 1,?subject ecrm:P108i_was_produced_by/ecrm:P7_took_place_at/geo-ont:name ?place_made1
+Former place (Acquistion Place),?subject ecrm:P53_has_former_or_current_location/ecrm:P89_falls_within/geo-ont:name ?place_found1
+Field Collection Place,?subject ecrm:P56_is_found_on/ecrm:P89_falls_within/geo-ont:name ?place_found2
+Refers to Place,?subject am:refersToPlace/geo-ont:name ?place_associated1
+Refers to Place,?subject am:isAboutPlace/geo-ont:name ?place_associated2
+Place Published,?subject ecrm:P108i_was_produced_by/ecrm:P7_took_place_at/am:placePublished ?place_published1
+Place Captured (Photography),?subject ecrm:P108i_was_produced_by/ecrm:P7_took_place_at/am:placeCaptured ?place_captured1
+Field Collection Locality Description,?subject ecrm:P24i_changed_ownership_through/am:localityDescription ?localityDescription1
+Field Collection Locality Description 2,?subject ecrm:P24_transferred_title_of/am:localityDescription ?localityDescription2
+Person ,
+Classification Person,?subject am:classificationPerson/foaf:name ?dc_contributor1
+Production Person (Name),?subject ecrm:P108i_was_produced_by/ecrm:P14_carried_out_by/foaf:name ?dc_contributor2
+Production Person (Value),?subject ecrm:P108i_was_produced_by/ecrm:P14_carried_out_by/rdf:value ?dc_contributor3
+Primary Production Person,?subject ecrm:P108i_was_produced_by/ecrm:P14_carried_out_by/am:primaryMaker/foaf:name ?dc_contributor5
+Secondary Production Person,?subject ecrm:P108i_was_produced_by/ecrm:P14_carried_out_by/am:secondaryMaker/foaf:name ?dc_contributor6
+Subject Person,?subject am:isAboutPerson ?person_about
+Refers to Person,?subject am:refersToPerson ?person_referred
+Classification Person,?subject am:classificationPerson ?person_classifiedBy
+Field Collection Person,?subject ecrm:P24i_changed_ownership_through/ecrm:P14_carried_out_by ?person_collectedBy} .
+Date,
+Date Made (Date as Text),?subject ecrm:P108i_was_produced_by/ecrm:P4_has_time_span/rdf:value ?date_made
+Earliest Date Made,?subject ecrm:P108i_was_produced_by/ecrm:P4_has_time_span/ecrm:P82a_begin_of_the_begin ?date_made_begin
+Latest Date Made,?subject ecrm:P108i_was_produced_by/ecrm:P4_has_time_span/ecrm:P82b_end_of_the_end ?date_made_end
+Date Published,?subject ecrm:P108i_was_produced_by/ecrm:P4_has_time_span/am:datePublished ?date_published
+Associated Date (Date as Text),?subject am:refersToDate/am:associatedDate ?date_associated
+Earliest Associated Date,?subject am:refersToDate/am:associatedDateStartDate ?date_associated_begin
+Latest Associated Date,?subject am:refersToDate/am:associatedDateEndDate ?date_associated_end
+Accessioned Date (Date as Text),?subject am:accessionDate ?date_accessioned
+Earliest Accessioned Date,?subject am:accessionDateEarliest ?date_accessioned_begin
+Latest Accessioned Date,?subject am:accessionDateLatest ?date_accessioned_end
+Acquistion Date (Date as Text),?subject ecrm:P24i_changed_ownership_through/ecrm:P4_has_time_span/am:acquisitionDate ?date_acquisitioned1
+Earliest Acquistion Date,?subject ecrm:P24i_changed_ownership_through/ecrm:P4_has_time_span/am:acquisitionDateEarliest ?date_acquisitioned_begin1
+Latest Acquistion Date,?subject ecrm:P24i_changed_ownership_through/ecrm:P4_has_time_span/am:acquisitionDateLatest ?date_acquisitioned_end1
+Production Time Period,?subject ecrm:P108i_was_produced_by/ecrm:P10_falls_within/rdfs:label ?time_period1
+General Time Period,?subject ecrm:P86_falls_within/am:timePeriod ?time_period2
+Classification Date (Date as Text),?subject am:classificationDate ?dc_date1
+Production Date (Date as Text),?subject ecrm:P108i_was_produced_by/ecrm:P4_has_time_span/ecrm:P3_has_note ?dc_date2
+Other,
+Sex ,?subject tn:sex ?gender
+Kind of Specimen,?subject tsp:kindOfSpecimen ?kindOfSpecimen
+Cultural Origin,?subject am:culturalOrigin ?culturalOrigin
+Related Object Links,?subject am:isRelatedTo/am:relatedObject ?related_object
