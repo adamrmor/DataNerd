@@ -1,5 +1,5 @@
 Admin Fields,
-
+,
 Department,?subject ecrm:P50_has_current_keeper/rdf:value ?department .
 Taonga Flag,?subject am:isTaonga ?isTaonga
 Natural Science 'Type Specimen' Flag,?subject dwc:typeStatus ?type_status
@@ -11,18 +11,18 @@ Date Created,?subject am:dateCreated ?date_created
 Record Type,?subject ecrm:P2_has_type/rdf:value ?documentType
 Sensitive Flags,?subject am:sensitive ?sensitive
 "Is ""Child"" record flag",?subject am:isChildOf ?childOf
-
+,
 Tags,
 
 Museum Tags,?subject am:museum_tag ?museum_tag
 User Tags,?subject am:user_tag ?user_tag
-
+,
 Image,
-
+,
 Image Link,?subject ecrm:P138_has_representation%230 ?primaryRepresentation
-
+,
 Identification ,
-
+,
 Identifier,?subject ecrm:P48_has_preferred_identifier/rdf:value ?dc_identifier1
 Identifier,?subject am:referenceNumber/rdf:value ?dc_identifier2
 Identifier,?subject ecrm:P1_is_identified_by/rdf:value ?dc_identifier3
