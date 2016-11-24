@@ -1,4 +1,5 @@
 Admin Fields,
+
 Department,?subject ecrm:P50_has_current_keeper/rdf:value ?department .
 Taonga Flag,?subject am:isTaonga ?isTaonga
 Natural Science 'Type Specimen' Flag,?subject dwc:typeStatus ?type_status
@@ -10,12 +11,18 @@ Date Created,?subject am:dateCreated ?date_created
 Record Type,?subject ecrm:P2_has_type/rdf:value ?documentType
 Sensitive Flags,?subject am:sensitive ?sensitive
 "Is ""Child"" record flag",?subject am:isChildOf ?childOf
+
 Tags,
+
 Museum Tags,?subject am:museum_tag ?museum_tag
 User Tags,?subject am:user_tag ?user_tag
+
 Image,
+
 Image Link,?subject ecrm:P138_has_representation%230 ?primaryRepresentation
+
 Identification ,
+
 Identifier,?subject ecrm:P48_has_preferred_identifier/rdf:value ?dc_identifier1
 Identifier,?subject am:referenceNumber/rdf:value ?dc_identifier2
 Identifier,?subject ecrm:P1_is_identified_by/rdf:value ?dc_identifier3
@@ -26,11 +33,14 @@ Display Name (Natural Sciences),OPTIONAL { ?subject am:classification/am:display
 Common Name (Natural Sciences),OPTIONAL { ?subject am:classification/am:commonName ?appellation5
 Maori Name (Natural Sciences),OPTIONAL { ?subject am:classification/am:maoriName ?appellation6
 Description /Notes,
+
 Description ,?subject dc:description ?dc_description1
 Description ,?subject am:description ?dc_description2
 Description ,?subject am:hasRole ?dc_description3
 Notes,?subject am:notes ?notes
+
 Documentary Heritage ,
+
 Documentary Heritage object 'Type',?subject am:subject/rdf:value ?type_subject
 Series,?subject am:series ?series
 Format,?subject dc:format ?dc_format
@@ -44,7 +54,9 @@ Language,?subject ecrm:E72_has_language/rdfs:label ?language
 Statement of Responsibilty,?subject am:statementOfResponsibility ?responsibility
 Subject Category,?subject am:subjectCategory ?subjectCategory
 Geo Subject,?subject am:geoSubject/rdf:value ?geoSubject
+
 Place,
+
 Place Acquired ,?subject ecrm:P24i_changed_ownership_through/ecrm:P7_took_place_at/ecrm:P89_falls_within/geo-ont:name ?place_acquired1
 Place Acquired ,?subject ecrm:P24i_changed_ownership_through/ecrm:P56_is_found_on/ecrm:P89_falls_within/geo-ont:name ?place_acquired2
 Place Acquired ,?subject ecrm:P24i_changed_ownership_through/ecrm:P59_is_located_on_or_within/geo-ont:name ?place_acquired3
@@ -60,7 +72,9 @@ Place Published,?subject ecrm:P108i_was_produced_by/ecrm:P7_took_place_at/am:pla
 Place Captured (Photography),?subject ecrm:P108i_was_produced_by/ecrm:P7_took_place_at/am:placeCaptured ?place_captured1
 Field Collection Locality Description,?subject ecrm:P24i_changed_ownership_through/am:localityDescription ?localityDescription1
 Field Collection Locality Description 2,?subject ecrm:P24_transferred_title_of/am:localityDescription ?localityDescription2
+
 Person ,
+
 Classification Person,?subject am:classificationPerson/foaf:name ?dc_contributor1
 Production Person (Name),?subject ecrm:P108i_was_produced_by/ecrm:P14_carried_out_by/foaf:name ?dc_contributor2
 Production Person (Value),?subject ecrm:P108i_was_produced_by/ecrm:P14_carried_out_by/rdf:value ?dc_contributor3
@@ -70,7 +84,9 @@ Subject Person,?subject am:isAboutPerson ?person_about
 Refers to Person,?subject am:refersToPerson ?person_referred
 Classification Person,?subject am:classificationPerson ?person_classifiedBy
 Field Collection Person,?subject ecrm:P24i_changed_ownership_through/ecrm:P14_carried_out_by ?person_collectedBy} .
+
 Date,
+
 Date Made (Date as Text),?subject ecrm:P108i_was_produced_by/ecrm:P4_has_time_span/rdf:value ?date_made
 Earliest Date Made,?subject ecrm:P108i_was_produced_by/ecrm:P4_has_time_span/ecrm:P82a_begin_of_the_begin ?date_made_begin
 Latest Date Made,?subject ecrm:P108i_was_produced_by/ecrm:P4_has_time_span/ecrm:P82b_end_of_the_end ?date_made_end
@@ -88,7 +104,9 @@ Production Time Period,?subject ecrm:P108i_was_produced_by/ecrm:P10_falls_within
 General Time Period,?subject ecrm:P86_falls_within/am:timePeriod ?time_period2
 Classification Date (Date as Text),?subject am:classificationDate ?dc_date1
 Production Date (Date as Text),?subject ecrm:P108i_was_produced_by/ecrm:P4_has_time_span/ecrm:P3_has_note ?dc_date2
+
 Other,
+
 Sex ,?subject tn:sex ?gender
 Kind of Specimen,?subject tsp:kindOfSpecimen ?kindOfSpecimen
 Cultural Origin,?subject am:culturalOrigin ?culturalOrigin
