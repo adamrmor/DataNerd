@@ -1,1 +1,2 @@
-{"head":{"vars":["title","image"]},"results":{"bindings":[{"image":{"type":"uri","value":"http://MEDIA.api.aucklandmuseum.com/id/media/v/603794"},"title":{"type":"literal","value":"Doodia australis (Parris) Parris"}},{"image":{"type":"uri","value":"http://MEDIA.api.aucklandmuseum.com/id/media/v/535129"},"title":{"type":"literal","value":"Pinus caribaea Morelet"}}]}}
+[{"title":"Doodia australis (Parris) Parris ","image":" http://api.aucklandmuseum.com/id/media/v/603794"},
+{"title":"Pinus caribaea Morelet ","image":" http://api.aucklandmuseum.com/id/media/v/535129"}]
